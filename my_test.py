@@ -32,7 +32,7 @@ def init_weights(m):
 # model.prune_model(.2,verbose=True)
 
 class PruneNN(nn.Module):
-    """Test and masterclass model
+    """Test and model masterclass
     """
     def __init__(self):
         super(PruneNN, self).__init__()
@@ -42,7 +42,7 @@ class PruneNN(nn.Module):
         #self.fc1 = nn.Linear(4, 5)
         #self.fc2 = nn.Linear(5, 5)
         #self.fc3 = nn.Linear(5, 3)
-        self.initialize_mask()
+        #self.initialize_mask()
     def forward(self, x):
         x = x.view(-1, 784)
         x = F.relu(self.fc1(x))
@@ -55,6 +55,8 @@ class PruneNN(nn.Module):
             self.prune_mask[index] = (params.data) < (params.data-1)
     def prune_model(self,cut_ratio, verbose = False):
         # Prune the model and removes cut_ratio weights for each layer.
+        if not hasattr(self, 'prune_mask'):
+            self.initialize_mask()
         nlayers2 = len(list(self.parameters())) #Number of layers*2 (weights+bias for each)
         for index,params in enumerate(self.parameters()):
             if index < nlayers2-2: # Do not prune output layer
