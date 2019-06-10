@@ -42,7 +42,7 @@ The reinitialization method presented in the Lottery Ticket Hypothesis paper is 
 
 ### Built With
 
-The project was coded in Pytorch.
+The project was coded in Pytorch.<img src="Pictures_readme/pytorch.png" alt="Pytorch Logo" width="25">
 
 
 ## What is pruning?
@@ -62,6 +62,15 @@ There are several techniques to reduce the size and the computing time of a mode
 We will study pruning in this project.
 
 ## How does it work?
+Once a model has been trained, some of the parameters are deleted according to a given criteria. 
+The most common is to delete weights if their absolute value is too low.
+
+<p align="center">
+  <a>
+    <img src="Pictures_readme/Pruning_schema.png" alt="Pruning" width="600">
+  </a>
+</p>
+In this project, I deleted for each layer the 20% of the weights having the lowest absolute value. I then retrain the model and reiterate until the portion of the weights I want to remove has been deleted.
 
 ## The Lottery Ticket Hypothesis
 
@@ -90,7 +99,30 @@ About 100 images per character were collected.
 
 Preprocessing: Faces in the images are detected with the MTCNN algorithm, cropped and saved as new images. Cropped face images are then resized to 144x144 and converted to grayscale.
 
+<p align="center">
+  <a>
+    <img src="Pictures_readme/preprocessing.png" alt="Preprocessing" width="600">
+  </a>
+</p>
+
+Here are some examples of the images in the "Grey Worm/Jacob Anderson" class:
+
+
+<p align="center">
+  <a>
+    <img src="Pictures_readme/Images_set.png" alt="Images Set" width="600">
+  </a>
+</p>
+
+
 Grayscale images are used as input for the LightCNN facial recognition model.
+More details about the model can be found on the project github [https://github.com/AlfredXiangWu/LightCNN](https://github.com/AlfredXiangWu/LightCNN) and the publication [https://arxiv.org/abs/1511.02683](https://arxiv.org/abs/1511.02683).
+
+<p align="center">
+  <a href="https://github.com/gcastex/PruNet">
+    <img src="Pictures_readme/lightcnn.png" alt="LightCNN architecture" width="600" height="150">
+  </a>
+</p>
 
 ## License
 
@@ -103,3 +135,6 @@ Guillaume Castex - g.castex117@gmail.com
 Project Link: [https://github.com/gcastex/PruNet](https://github.com/gcastex/PruNet)
 
 ## Acknowledgements
+
+[https://github.com/gfrogat/prunhild](https://github.com/gfrogat/prunhild)
+[https://github.com/AlfredXiangWu/LightCNN](https://github.com/AlfredXiangWu/LightCNN)
