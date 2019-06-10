@@ -48,20 +48,20 @@ The project was coded in Pytorch.<img src="Pictures_readme/pytorch.png" alt="Pyt
 ## What is pruning?
 Pruning is a technique that allows to reduce the size of a neural network by removing some of its branches.
 
-## Why use pruning?
+### Why use pruning?
 Let's first have a look at why pruning is used.
 
 Running a ML model can be computationally expensive in terms of:
--Disk Space
--Memory usage
--CPU/GPU runtime
+* Disk Space
+* Memory usage
+* CPU/GPU runtime
 
 There is a strong incentive in making the machine learning models as small as possible to reduce their costs.
 
 There are several techniques to reduce the size and the computing time of a model: quantization/binarization, knowledge distillation, low-rank factorization, parameters pruning... Several of these techniques can be used together to optimally compress a model.
 We will study pruning in this project.
 
-## How does it work?
+### How does it work?
 Once a model has been trained, some of the parameters are deleted according to a given criteria. 
 The most common is to delete weights if their absolute value is too low.
 
@@ -70,9 +70,9 @@ The most common is to delete weights if their absolute value is too low.
     <img src="Pictures_readme/Pruning_schema.png" alt="Pruning" width="600">
   </a>
 </p>
-In this project, I deleted for each layer the 20% of the weights having the lowest absolute value. I then retrain the model and reiterate until the portion of the weights I want to remove has been deleted.
+In this project, for each layer I deleted the 20% of the weights having the lowest absolute value. I then retrain the model and reiterate until the portion of the weights I want to remove has been deleted.
 
-## The Lottery Ticket Hypothesis
+### The Lottery Ticket Hypothesis
 
 The original paper can be found here:
 [https://arxiv.org/abs/1803.03635](https://arxiv.org/abs/1803.03635)
@@ -80,7 +80,7 @@ The original paper can be found here:
 
 ## Facial Recognition
 
-## Dataset
+### Dataset
 
 The dataset contains facial images of seven characters from the TV series Game of Thrones.
 The characters are:
@@ -95,7 +95,7 @@ The characters are:
 Images were collected from Google Images and each class was manually cleaned.
 About 100 images per character were collected.
 
-## Pipeline
+### Pipeline
 
 Preprocessing: Faces in the images are detected with the MTCNN algorithm, cropped and saved as new images. Cropped face images are then resized to 144x144 and converted to grayscale.
 
@@ -136,5 +136,5 @@ Project Link: [https://github.com/gcastex/PruNet](https://github.com/gcastex/Pru
 
 ## Acknowledgements
 
-[https://github.com/gfrogat/prunhild](https://github.com/gfrogat/prunhild)
-[https://github.com/AlfredXiangWu/LightCNN](https://github.com/AlfredXiangWu/LightCNN)
+* [https://github.com/gfrogat/prunhild](https://github.com/gfrogat/prunhild)
+* [https://github.com/AlfredXiangWu/LightCNN](https://github.com/AlfredXiangWu/LightCNN)
