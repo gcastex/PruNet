@@ -138,3 +138,5 @@ Project Link: [https://github.com/gcastex/PruNet](https://github.com/gcastex/Pru
 
 * [https://github.com/gfrogat/prunhild](https://github.com/gfrogat/prunhild)
 * [https://github.com/AlfredXiangWu/LightCNN](https://github.com/AlfredXiangWu/LightCNN)
+* [https://github.com/00arun00/Pruning-Pytorch](https://github.com/00arun00/Pruning-Pytorch)
+* [https://github.com/othneildrew/Best-README-Template](https://github.com/othneildrew/Best-README-Template)
