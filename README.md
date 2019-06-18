@@ -36,8 +36,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
  The goal of this project is to understand the concept of pruning for neural networks. 
- Two networks are being pruned in this study: an image classifier built with a fully connected network trained on MNIST, and a facial recognition model trained on a custom dataset.
-The reinitialization method presented in the Lottery Ticket Hypothesis paper is tested on both models.
+ Two networks can be pruned: an image classifier built with a fully connected network trained on MNIST, and a facial recognition model trained on a custom dataset.
+The reinitialization method presented in the Lottery Ticket Hypothesis paper can be tested on both models.
 
 
 ### Built With
@@ -124,6 +124,10 @@ More details about the model can be found on the project github [https://github.
   </a>
 </p>
 
+
+### Comparison of reinitialization methods
+
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
@@ -139,5 +143,6 @@ Project Link: [https://github.com/gcastex/PruNet](https://github.com/gcastex/Pru
 * [https://github.com/gfrogat/prunhild](https://github.com/gfrogat/prunhild)
 * [https://github.com/AlfredXiangWu/LightCNN](https://github.com/AlfredXiangWu/LightCNN)
 * [https://github.com/00arun00/Pruning-Pytorch](https://github.com/00arun00/Pruning-Pytorch)
+* [https://github.com/TropComplique/mtcnn-pytorch](https://github.com/TropComplique/mtcnn-pytorch)
 * [https://github.com/othneildrew/Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 * [https://thenounproject.com/search/?q=scissors&i=974696#](https://thenounproject.com/search/?q=scissors&i=974696#) (scissors image used in logo)
