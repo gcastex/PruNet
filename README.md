@@ -127,6 +127,13 @@ More details about the model can be found on the project github [https://github.
 
 ### Comparison of reinitialization methods
 
+Below is a plot comparing the accuracy of the pruned model with 3 different reinitialization schemes used for the weights after pruning: Keep the trained values from the trained full model, use a random new set of values, or re-use the initialization values from the full model before training (the method tested in the lottery ticket hypothesis paper).
+<p align="center">
+  <a href="https://github.com/gcastex/PruNet">
+    <img src="Pictures_readme/plot_comp.png" alt="Comparison of reinitialization methods" width="600" height="150">
+  </a>
+</p>
+
 
 ## License
 
